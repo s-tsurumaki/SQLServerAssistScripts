@@ -1,6 +1,7 @@
-# SQLServerAssistScripts
+# これはなに？
  SQLServerで利用する関数郡
 
+## UserDefinedFunction
 
 ### F_ToSeireki(@Date,@GetItem,@ZeroPadding)
 
@@ -25,3 +26,8 @@ UNION ALL SELECT dbo.F_ToSeireki (GETDATE(),1,1) AS F_ToSeireki -- 2017年
 UNION ALL SELECT dbo.F_ToSeireki (GETDATE(),2,1) AS F_ToSeireki -- 01月
 UNION ALL SELECT dbo.F_ToSeireki (GETDATE(),3,1) AS F_ToSeireki -- 24日
 ```
+## StoredProcedure
+
+### P_RefreshViewAll
+
+依存関係がある全てのviewに[sp_refreshview](https://technet.microsoft.com/ja-jp/library/ms187821(v=sql.110).aspx)を実行します。
